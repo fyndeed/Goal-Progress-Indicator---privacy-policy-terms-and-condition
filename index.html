@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Goal Progress Indicator — Privacy Policy &amp; Terms</title>
+<style>
+  :root {
+    --violet: #7C3AED;
+    --violet-dark: #5B21B6;
+    --ink: #1A1523;
+    --ink-soft: #4B4558;
+    --muted: #6B6478;
+    --bg: #FAF9FC;
+    --card: #FFFFFF;
+    --border: #E7E3EE;
+    --radius: 16px;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #F2F0F5;
+      --ink-soft: #C9C4D6;
+      --muted: #9A93AC;
+      --bg: #121016;
+      --card: #1C1A22;
+      --border: #2E2A3A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #F2F0F5;
+    --ink-soft: #C9C4D6;
+    --muted: #9A93AC;
+    --bg: #121016;
+    --card: #1C1A22;
+    --border: #2E2A3A;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    scroll-padding-top: calc(76px + env(safe-area-inset-top, 0px));
+  }
+  a { color: var(--violet); }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: env(safe-area-inset-top, 0px) 0 0 0;
+  }
+  .header-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--violet), var(--violet-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .header-text h1 {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .header-text span {
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+
+  nav.tabs {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 6px;
+    border-top: 1px solid var(--border);
+  }
+  nav.tabs a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 12px 6px;
+    border-bottom: 2px solid transparent;
+  }
+  nav.tabs a.active {
+    color: var(--violet);
+    border-bottom-color: var(--violet);
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+
+  .hero {
+    margin-bottom: 28px;
+  }
+  .hero h2 {
+    font-size: 26px;
+    margin: 0 0 6px;
+  }
+  .hero p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 14.5px;
+  }
+
+  section.doc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 28px 8px;
+    margin-bottom: 24px;
+    scroll-margin-top: 90px;
+  }
+  section.doc h2.doc-title {
+    font-size: 20px;
+    margin: 0 0 4px;
+  }
+  section.doc .updated {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 18px;
+  }
+  section.doc .intro {
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-size: 15.5px;
+    margin: 26px 0 8px;
+    color: var(--ink);
+  }
+  h4.perm {
+    font-size: 14.5px;
+    margin: 18px 0 4px;
+    color: var(--violet);
+    font-weight: 700;
+  }
+  p, li {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 4px; }
+  strong.label { color: var(--ink); }
+
+  .perm-block {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 10px 0 18px;
+  }
+  .perm-block h4.perm { margin-top: 0; }
+  .perm-block p { margin: 4px 0; }
+
+  footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.7;
+  }
+  footer a { color: var(--violet); text-decoration: none; }
+
+  @media (max-width: 480px) {
+    section.doc { padding: 22px 18px 8px; }
+    .header-inner { padding: 14px 18px; }
+    nav.tabs { padding: 0 18px; }
+    main { padding: 24px 18px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-badge">GP</div>
+    <div class="header-text">
+      <h1>Goal Progress Indicator</h1>
+      <span>by Votmic</span>
+    </div>
+  </div>
+  <nav class="tabs">
+    <a href="#privacy" class="active" onclick="setActive(this)">Privacy Policy</a>
+    <a href="#terms" onclick="setActive(this)">Terms &amp; Conditions</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h2>Privacy &amp; Terms</h2>
+    <p>Everything about how Goal Progress Indicator handles your data and what you agree to by using it.</p>
+  </div>
+
+  <section class="doc" id="privacy">
+    <h2 class="doc-title">Privacy Policy</h2>
+    <p class="updated">Last updated: September 2026</p>
+    <p class="intro">Goal Progress Indicator is committed to protecting your privacy. This policy explains what data the app accesses and how it is used.</p>
+
+    <h3>1. Overview</h3>
+    <p>This is a fully offline application. It does not collect, transmit, or share any personal data. There are no servers, no cloud services, and no analytics. All data remains on your device.</p>
+
+    <h3>2. Data We Do NOT Collect</h3>
+    <p>We do not collect: your name, email, phone number, location, contacts, photos, files, browsing history, or any other personal information. There is no analytics SDK, no crash reporting tool, no advertising framework, and no tracking mechanism in this app.</p>
+
+    <h3>3. Data Stored Locally</h3>
+    <p>The app stores the following data locally on your device using a Room (SQLite) database:</p>
+    <ul>
+      <li>Goal titles, start dates, end dates, and progress status</li>
+      <li>Log entries (text notes you add to track daily progress)</li>
+      <li>Reminder preferences for each goal</li>
+      <li>App settings and first-run agreement status</li>
+    </ul>
+    <p>This data is used solely to provide the app's functionality and never leaves your device.</p>
+
+    <h3>4. Permissions Used</h3>
+    <p>This app requests the following Android permissions. Each one is explained below with the exact reason it is needed and how it is used.</p>
+
+    <div class="perm-block">
+      <h4 class="perm">POST_NOTIFICATIONS (Android 13+)</h4>
+      <p><strong class="label">Why:</strong> Required to show daily goal reminders and goal-end alert notifications. Without this, reminders will not work on Android 13 and above.</p>
+      <p><strong class="label">Scope:</strong> Only used when you enable reminders for a goal. No notifications are sent without your explicit opt-in. The notification content is your goal title and progress percentage — no personal data is included.</p>
+    </div>
+
+    <div class="perm-block">
+      <h4 class="perm">RECEIVE_BOOT_COMPLETED</h4>
+      <p><strong class="label">Why:</strong> Android cancels all scheduled alarms when the device is restarted. Without this permission, all your goal reminders would stop working after every reboot. This permission allows the app to automatically re-schedule your reminders after a restart so you never miss a check-in.</p>
+      <p><strong class="label">Scope:</strong> Only reschedules existing alarms that you have already enabled. Does not access any data, does not send any information, does not run any network calls. Simply re-registers the same alarms that were active before the restart.</p>
+    </div>
+
+    <div class="perm-block">
+      <h4 class="perm">SCHEDULE_EXACT_ALARM</h4>
+      <p><strong class="label">Why:</strong> By default, Android groups alarms into approximate time windows (e.g., "sometime between 7:00–7:15 AM"). This permission allows the app to fire your reminder at the exact time you set (e.g., exactly 7:00 AM), so you get your daily check-in prompt precisely when you want it.</p>
+      <p><strong class="label">Scope:</strong> Used only for goal reminder alarms that you explicitly enable when creating or editing a goal. No background scheduling, no recurring system jobs, no hidden alarms.</p>
+    </div>
+
+    <div class="perm-block">
+      <h4 class="perm">FOREGROUND_SERVICE (optional)</h4>
+      <p><strong class="label">Why:</strong> In rare cases, Android may kill background processes to free memory. A brief foreground service ensures your notification is delivered even in low-memory situations.</p>
+      <p><strong class="label">Scope:</strong> Does not run continuously. Only activates briefly (a few seconds) to deliver a single notification, then stops immediately. No data processing, no network activity.</p>
+    </div>
+
+    <h3>5. Internet Access</h3>
+    <p>This app does NOT request or use the INTERNET permission. No data is ever sent to any external server, API, or cloud service. All features work entirely offline.</p>
+
+    <h3>6. Third-Party Services</h3>
+    <p>This app does not integrate any third-party SDKs, libraries, or services. There is no Google Analytics, Firebase, Crashlytics, AdMob, or any other third-party code that could collect data.</p>
+
+    <h3>7. Children's Privacy</h3>
+    <p>This app does not knowingly collect any data from children or any other users. Since no personal data is collected at all, COPPA and similar regulations are inherently satisfied.</p>
+
+    <h3>8. Data &amp; Storage</h3>
+    <p>All your goals, progress data, and log entries are stored exclusively on your device using Android's Room (SQLite) database. No data is backed up to the cloud or shared with any external service.</p>
+    <p>The local database is located in the app's private internal storage directory, which is accessible only to the app itself. No other app or service can access this data without root access to the device.</p>
+    <p>You can delete all data by uninstalling the app or by deleting individual goals from within the app. Deleting a goal permanently removes all its log entries, progress data, and reminder settings from the local database.</p>
+    <p>There is no export, backup, or sync feature. Your data stays and dies with the app on your device.</p>
+
+    <h3>9. Data Deletion</h3>
+    <p>You can delete any individual goal and its associated log entries at any time from within the app. Uninstalling the app will remove all locally stored data from your device.</p>
+
+    <h3>10. Changes to This Policy</h3>
+    <p>We may update this Privacy Policy from time to time to reflect changes in the app's functionality. Any changes will be posted on this page with an updated "Last updated" date. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+
+    <h3>11. Contact</h3>
+    <p>For any questions about this Privacy Policy, please contact: <a href="mailto:votmic.india@gmail.com">votmic.india@gmail.com</a></p>
+  </section>
+
+  <section class="doc" id="terms">
+    <h2 class="doc-title">Terms &amp; Conditions</h2>
+    <p class="updated">Last updated: September 2026</p>
+    <p class="intro">By downloading, installing, or using Goal Progress Indicator, you agree to the following terms:</p>
+
+    <h3>1. Acceptance of Terms</h3>
+    <p>By accessing or using this app, you acknowledge that you have read, understood, and agree to be bound by these Terms &amp; Conditions. If you do not agree, please do not use the app.</p>
+
+    <h3>2. Description of Service</h3>
+    <p>Goal Progress Indicator is a personal goal tracking application that allows you to:</p>
+    <ul>
+      <li>Create and manage personal goals with start and end dates</li>
+      <li>Track progress using linear or circular progress indicators</li>
+      <li>Add daily log entries to record your activities</li>
+      <li>Set daily reminders for goal check-ins</li>
+      <li>View history of achieved and missed goals</li>
+      <li>Use a home screen widget for quick progress overview</li>
+    </ul>
+
+    <h3>3. User Responsibilities</h3>
+    <p>You are responsible for:</p>
+    <ul>
+      <li>All data you enter into the app (goals, log entries)</li>
+      <li>Maintaining backups of your data (the app stores data locally only)</li>
+      <li>Ensuring your device has sufficient storage for the app to function</li>
+      <li>Managing notification permissions through your device settings</li>
+    </ul>
+
+    <h3>4. Data Ownership</h3>
+    <p>All data entered into the app belongs to you. The app does not have access to your data beyond what is stored locally on your device. We do not claim any ownership over your goals, progress, or log entries.</p>
+
+    <h3>5. No Warranty</h3>
+    <p>This app is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that:</p>
+    <ul>
+      <li>The app will be uninterrupted or error-free</li>
+      <li>The app will meet your specific requirements</li>
+      <li>Any data stored in the app will be preserved (backup is your responsibility)</li>
+      <li>The app will be compatible with all devices or OS versions</li>
+    </ul>
+
+    <h3>6. Limitation of Liability</h3>
+    <p>In no event shall the developers be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the app. This includes but is not limited to loss of data, loss of progress, or any other losses.</p>
+
+    <h3>7. Intellectual Property</h3>
+    <p>The app, its design, code, and content (excluding user-entered data) are the intellectual property of the developer. You may not copy, modify, distribute, or reverse-engineer any part of the app.</p>
+
+    <h3>8. Modifications to the App</h3>
+    <p>We reserve the right to modify, update, or discontinue the app at any time without prior notice. We may also update these terms from time to time. Continued use of the app after changes constitutes acceptance of the new terms.</p>
+
+    <h3>9. Termination</h3>
+    <p>You may stop using the app at any time by simply uninstalling it. We reserve the right to terminate or restrict your access to the app at our discretion, without notice, for conduct that we believe violates these terms.</p>
+
+    <h3>10. Governing Law</h3>
+    <p>These terms shall be governed by and construed in accordance with applicable laws. Any disputes arising from these terms or the use of the app shall be resolved in the appropriate courts.</p>
+
+    <h3>11. Severability</h3>
+    <p>If any provision of these terms is found to be unenforceable, the remaining provisions shall continue in full force and effect.</p>
+
+    <h3>12. Contact</h3>
+    <p>For any questions about these Terms &amp; Conditions, please contact: <a href="mailto:votmic.india@gmail.com">votmic.india@gmail.com</a></p>
+  </section>
+</main>
+
+<footer>
+  <div>Goal Progress Indicator &middot; Package: com.votmic.goalprogressindicator</div>
+  <div>Developed by Votmic &middot; <a href="mailto:votmic.india@gmail.com">votmic.india@gmail.com</a></div>
+</footer>
+
+<script>
+  function setActive(el) {
+    document.querySelectorAll('nav.tabs a').forEach(a => a.classList.remove('active'));
+    el.classList.add('active');
+  }
+  // Keep the tab highlight in sync with scroll position
+  const sections = [document.getElementById('privacy'), document.getElementById('terms')];
+  const links = document.querySelectorAll('nav.tabs a');
+  window.addEventListener('scroll', () => {
+    let currentIndex = 0;
+    sections.forEach((sec, i) => {
+      if (sec.getBoundingClientRect().top - 100 <= 0) currentIndex = i;
+    });
+    links.forEach((a, i) => a.classList.toggle('active', i === currentIndex));
+  }, { passive: true });
+</script>
+
+</body>
+</html>
